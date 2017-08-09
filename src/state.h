@@ -1,15 +1,20 @@
 #ifndef STATE_H
 #define STATE_H
 
+#include <Eigen\Dense>
 
 class State
 {
 public:
-    State(int size=1) = 0;
-    init(const int* values);
+    State(int size);
+	void init(const double * values);
+	int getSize();
+	Eigen::VectorXd getVector();
 private:
-    unsigned int m_size;
-    Eigen::Vector3d m_vector;
+    int m_size;
+    Eigen::VectorXd* m_vector;
+
+	void setSize(int size);
 
 
 };
