@@ -1,3 +1,12 @@
+#visual Studio
+*.log
+*.tlog
+*.lastbuildstate
+*.idb
+*.vcxproj
+*.filters
+*.pdb
+
 # Prerequisites
 *.d
 
