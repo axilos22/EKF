@@ -10,8 +10,8 @@ public:
     Filter(const char* name="default");
 private:
     State* m_X;
-	CovarianceMatrix* m_P;
-	CovarianceMatrix* m_Q;
+    CovarianceMatrix* m_P;
+    CovarianceMatrix* m_Q;
 };
 
 #endif // FILTER_H
