@@ -2,14 +2,21 @@
 
 State::State(int size) :
     m_size(size)
-{}
+{
+    m_vector = Eigen::VectorXd(m_size);
+}
 
-void State::init(const double * values)
+void State::init(const double *values)
 {
 	for (int rank = 0; rank < m_size; rank++)
 	{
-		*m_vector << values[rank];
-	}
+        m_vector << values[rank];
+    }
+}
+
+void State::init(Eigen::VectorXd x0)
+{
+    m_vector = x0;
 }
 
 int State::getSize()
@@ -19,10 +26,5 @@ int State::getSize()
 
 Eigen::VectorXd State::getVector()
 {
-	return *m_vector;
-}
-
-void State::setSize(int size)
-{
-	m_size = size;
+    return m_vector;
 }
