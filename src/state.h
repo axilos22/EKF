@@ -1,7 +1,7 @@
 #ifndef STATE_H
 #define STATE_H
 
-#include <eigen3/Eigen/Dense>
+#include "externalTool.h"
 
 class State
 {

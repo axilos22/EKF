@@ -1,7 +1,7 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-#include <eigen3/Eigen/Dense>
+#include "externalTool.h"
 
 class Input
 {
