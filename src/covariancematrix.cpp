@@ -13,3 +13,8 @@ void CovarianceMatrix::setDiagonal(double *diagValues)
         m_matrix(i,i) = diagValues[i];
     }
 }
+
+Eigen::MatrixXd CovarianceMatrix::getMatrix()
+{
+    return m_matrix;
+}
