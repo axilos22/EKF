@@ -11,7 +11,7 @@ public:
 
 private:
     int m_size;
-    Eigen::VectorXd m_vector;
+    Eigen::VectorXd* m_vector;
 };
 
 #endif // MEASUREMENT_H
