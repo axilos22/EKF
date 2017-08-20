@@ -8,6 +8,9 @@ find_package(Eigen3 REQUIRED)
 
 include_directories(EIGEN3_INCLUDE_DIR)
 
-include_directories("${SRC_DIR}")
+file(GLOB ekf_SRC
+    "src/*.h"
+    "src/*.cpp"
+)
 
-add_executable(EKF src/main src/filter src/state src/covariancematrix src/input)
+add_executable(EKF ${ekf_SRC})
