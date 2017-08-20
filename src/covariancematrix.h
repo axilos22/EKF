@@ -11,7 +11,7 @@ public:
     Eigen::MatrixXd getMatrix();
 private:
     int m_size;
-    Eigen::MatrixXd m_matrix;
+    Eigen::MatrixXd* m_matrix;
 };
 
 #endif // COVARIANCEMATRIX_H
