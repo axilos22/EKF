@@ -14,9 +14,9 @@ public:
 
 private:
     int m_size;
-    Eigen::VectorXd m_vector;
+    Eigen::VectorXd *m_vector;
 
-
+    void setVectorElement(int rank, double el);
 };
 
 #endif // STATE_H
