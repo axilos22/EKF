@@ -9,8 +9,10 @@ find_package(Eigen3 REQUIRED)
 include_directories(EIGEN3_INCLUDE_DIR)
 
 file(GLOB ekf_SRC
-    "src/*.h"
     "src/*.cpp"
+    "src/*.h"
+    "src/core/*.cpp"
+    "src/core/*.h"
 )
 
 add_executable(EKF ${ekf_SRC})

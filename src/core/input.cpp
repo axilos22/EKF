@@ -10,3 +10,8 @@ Eigen::VectorXd Input::getVector()
 {
     return *m_vector;
 }
+
+double Input::getElement(const int rank)
+{
+    return m_vector(rank);
+}

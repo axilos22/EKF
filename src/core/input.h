@@ -8,6 +8,7 @@ class Input
 public:
     Input(int size);
     Eigen::VectorXd getVector();
+    double getElement(const int rank);
 
 private:
     int m_size;

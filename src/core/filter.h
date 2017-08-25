@@ -12,7 +12,7 @@ public:
     Filter(const char* name="default");
     virtual int predict(State x, Input u) = 0;
     virtual int update(State x, Measurement y) = 0;
-private:
+protected:
     State* m_X;
     CovarianceMatrix* m_P;
     CovarianceMatrix* m_Q;
