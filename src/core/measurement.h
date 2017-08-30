@@ -1,17 +1,12 @@
 #ifndef MEASUREMENT_H
 #define MEASUREMENT_H
 
-#include "externalTool.h"
+#include "vectormanipulator.h"
 
-class Measurement
+class Measurement : public VectorManipulator
 {
 public:
     Measurement(int size);
-    Eigen::VectorXd getVector();
-
-private:
-    int m_size;
-    Eigen::VectorXd* m_vector;
 };
 
 #endif // MEASUREMENT_H

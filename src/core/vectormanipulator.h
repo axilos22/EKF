@@ -9,9 +9,11 @@ class VectorManipulator
 public:
     VectorManipulator(int size);
     ~VectorManipulator();
+    void init(double *values);
     double getElement(int rank);
     double operator() (int rank);
     Eigen::VectorXd getVector();
+    int getSize();
 
 protected:
     void setElement(int rank, double value);

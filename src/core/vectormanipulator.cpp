@@ -26,6 +26,11 @@ Eigen::VectorXd VectorManipulator::getVector()
     return *m_vector;
 }
 
+int VectorManipulator::getSize()
+{
+    return m_size;
+}
+
 void VectorManipulator::setElement(int rank, double value)
 {
     if(rank < m_size)
@@ -46,4 +51,12 @@ double VectorManipulator::operator()(int rank, double value)
 void VectorManipulator::setVector(Eigen::VectorXd vector)
 {
     (*m_vector) = vector;
+}
+
+void VectorManipulator::init(double *values)
+{
+    for (int rank = 0; rank < m_size; rank++)
+    {
+        setElement(rank,values[rank]);
+    }
 }
