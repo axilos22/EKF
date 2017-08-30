@@ -11,6 +11,7 @@ using namespace Eigen;
 
 
 void stateTest() {
+    cout << "state Test" << endl;
     State x(2);
     double vals[2] = {2,3};
     x.init(vals);
@@ -19,16 +20,19 @@ void stateTest() {
 }
 
 void obsMatrixTest() {
-    ObservationMatrix obs(6,6);
+    cout << "Obs Matrix Test" << endl;
+    ObservationMatrix obs(3,3);
+    double nb[] = { 16.3, 2.3, 77.2, 40.1};
+    obs.init(nb);
     MatrixXd mat = obs.getMatrix();
-    cout << "matRows= " << mat.rows() << "matCols= " << mat.cols() << endl;
-    cout << "add info:" << mat.coeff(2) << endl;
+    cout << mat << endl;
 }
 
 int main()
 {
     cout << "Starting program" << endl;
     stateTest();
+    obsMatrixTest();
     return 0;
 }
 
