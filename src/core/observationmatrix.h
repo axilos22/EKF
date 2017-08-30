@@ -1,20 +1,12 @@
 #ifndef OBSERVATIONMATRIX_H
 #define OBSERVATIONMATRIX_H
 
-#include "externalTool.h"
+#include "matrixmanipulator.h"
 
-using namespace Eigen;
-
-class ObservationMatrix
+class ObservationMatrix : public MatrixManipulator
 {
 public:
     ObservationMatrix(int row, int col);
-    MatrixXd getMatrix();
-
-private:
-    int m_row;
-    int m_col;
-    MatrixXd* m_matrix;
 };
 
 #endif // OBSERVATIONMATRIX_H
