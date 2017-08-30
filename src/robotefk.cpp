@@ -15,6 +15,6 @@ RobotEFK::RobotEFK(const char *name) :
 
 int RobotEFK::predict(State x, Input u)
 {
-//    double deltaD = (1/2.)*(u(lEncoderRank) + u(rEncoderRank));
-//    double deltaTheta = (1/robotWheelSpace)*(u(lEncoderRank) - u(rEncoderRank));
+    double deltaD = (1/2.)*(u(lEncoderRank) + u(rEncoderRank));
+    double deltaTheta = (1/robotWheelSpace)*(u(lEncoderRank) - u(rEncoderRank));
 }
