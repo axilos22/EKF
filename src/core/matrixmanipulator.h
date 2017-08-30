@@ -10,10 +10,10 @@ class MatrixManipulator
 public:
     MatrixManipulator(int row, int col);
     MatrixXd getMatrix();
+    void init(double* values);
+    void fill(double value); //TODO test & validate
 
 protected:
-    void init(double* values);
-    void fill(double value);
     void setElement(int row, int col, double value);
     void setDiagonal(double* values);
 
