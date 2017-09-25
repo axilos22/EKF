@@ -6,7 +6,7 @@
 class CovarianceMatrix : public MatrixManipulator
 {
 public:
-    CovarianceMatrix(int size);    
+    CovarianceMatrix(int size);
 };
 
 #endif // COVARIANCEMATRIX_H
