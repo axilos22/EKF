@@ -14,10 +14,10 @@ public:
     double operator() (int rank);
     Eigen::VectorXd getVector();
     int getSize();
-
-protected:
     void setElement(int rank, double value);
     double operator() (int rank, double value);
+
+protected:
     void setVector(Eigen::VectorXd vector);
 
 private:
