@@ -16,6 +16,11 @@ class RobotEFK : public Filter
         thetaRank = 2
     };
 
+    enum y_rank{
+        xGPS = 0,
+        yGPS = 1
+    };
+
 public:
     static double robotWheelSpace;
     RobotEFK(const char* name);
