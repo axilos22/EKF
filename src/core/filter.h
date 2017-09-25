@@ -10,6 +10,7 @@ class Filter
 {
 public:
     Filter(const char* name="default");
+    ~Filter();
     virtual int predict(State x, Input u) = 0;
     virtual int update(State x, Measurement y) = 0;
 protected:
