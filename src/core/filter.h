@@ -5,6 +5,7 @@
 #include "covariancematrix.h"
 #include "input.h"
 #include "measurement.h"
+#include "jacobianmatrix.h"
 
 class Filter
 {
@@ -17,6 +18,7 @@ protected:
     State* m_X;
     CovarianceMatrix* m_P;
     CovarianceMatrix* m_Q;
+    JacobianMatrix* m_F;
 };
 
 #endif // FILTER_H
