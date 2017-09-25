@@ -9,6 +9,13 @@ MatrixManipulator::MatrixManipulator(int row, int col):
     m_matrix = new MatrixXd(row,col);
 }
 
+MatrixManipulator::MatrixManipulator(int rowCol) :
+    m_row(rowCol),
+    m_col(rowCol)
+{
+    m_matrix = new MatrixXd(rowCol,rowCol);
+}
+
 MatrixXd MatrixManipulator::getMatrix()
 {
     return *m_matrix;

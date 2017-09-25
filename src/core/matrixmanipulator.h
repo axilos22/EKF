@@ -9,6 +9,7 @@ class MatrixManipulator
 {
 public:
     MatrixManipulator(int row, int col);
+    MatrixManipulator(int rowCol);
     MatrixXd getMatrix();
     void init(double* values);
     void fill(double value); //TODO test & validate
